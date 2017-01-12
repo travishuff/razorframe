@@ -1,6 +1,6 @@
 {
   "name": "razorframe",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "description": "Empowering scalable, real-time web apps in Node.js",
   "main": "./lib/Razorframe.js",
   "scripts": {
