@@ -1,16 +1,16 @@
-#razorframe  
+# razorframe  
 **Version**  
 [![npm version](https://badge.fury.io/js/razorframe.svg)](https://badge.fury.io/js/razorframe) 
 ![Build Status](https://travis-ci.org/team-emt/razorframe.svg?branch=master) 
   
-###*Empowering scalable, real-time web apps in Node.js*  
+### *Empowering scalable, real-time web apps in Node.js*  
 
-###Visit us at: [http://www.razorfra.me](http://www.razorfra.me)  
+### Visit us at: [http://www.razorfra.me](http://www.razorfra.me)  
 <p align="center">
   <img src="https://raw.githubusercontent.com/travishuff/razorframe/master/rz-logo.png" />
 </p> 
 
-##Table of Contents:  
+## Table of Contents:  
 1. [Description](#description)  
 2. [Installation](#installation)  
 3. Usage: [Server-Side Module](#server)  
@@ -24,7 +24,7 @@
 11. [Contributions](#contributions)  
 12. [License](#license)  
 
-##<a name="description"></a>Description  
+## <a name="description"></a>Description  
 Razorframe is a Javascript library built on Node.js which enables developers to build a real-time client experience while maintaining scalable, async back-end operations.  
 
 Socket.io powers real-time client updates on the front-end, while Node clusters and event emitters in conjunction with a custom messaging queue process highly concurrent and asynchronous operations on the back-end.
@@ -33,16 +33,16 @@ We use a messaging queue, called razorframe, that intercepts incoming user inter
 
 Our tests have shown this process keeps the client UI updating in sub 100ms "real-time" fashion at scale while maintaining accurate database writes.
 
-##<a name="installation"></a>Installation
+## <a name="installation"></a>Installation
 **Using npm:**  
 
 ```javascript
 $ npm i --save razorframe
 ```
 
-##How to Use
+## How to Use
 
-###Hosted Redis server:  
+### Hosted Redis server:  
 We have removed the hosted Redis server originally provided during initial rollout.  In order to leverage concurrency with razorframe and ensure server -> client communication, be sure to instantiate a local or hosted Redis server for your application.  
 
 You can store your Redis reference in an environment variable, or fall back to a locally hosted instance (see below):
@@ -52,7 +52,7 @@ const REDIS_URL = process.env.REDIS_URL || { host: 'localhost', port: 6379 }
 ```
 
 
-###<a name="server"></a>Server-side module:  
+### <a name="server"></a>Server-side module:  
 
 **(1) Require razorframe**  
 **(2) Specify ```rzConfig``` object to set up server processes by declaring:**
@@ -142,30 +142,30 @@ if (err) rz.onError(MSG, 2);
 ```  
 where 'MSG' is the task being sent to the database and the second argument, in this case '2', specifies the number of attempts to do the query.  Razorframe will re-enqueue the task 'n' number of times with a default of 2 total attempts.  If the event fails to query after all attempts, a message is sent to the user that enqueued the event that the event has failed to write and will be dropped.
 
-##<a name="demo"></a>Demo App
+## <a name="demo"></a>Demo App
 Check out our demo app for more usage examples at: [RZ-Demo](https://github.com/team-emt/rz_demo)
 
-##<a name="platform"></a>Platform
+## <a name="platform"></a>Platform
 [Node.js](https://nodejs.org/)  
 
-##<a name="dependencies"></a>Dependencies
+## <a name="dependencies"></a>Dependencies
 [Socket.io](https://www.npmjs.com/package/socket.io)  
 
-##<a name="authors"></a>Authors  
+## <a name="authors"></a>Authors  
 [Travis Huff](https://github.com/travishuff)  
 [Eddie Park](https://github.com/parkedwards)  
 [Michael Sotkin](https://github.com/msotkin)
 
-##<a name="feedback"></a>Feedback
+## <a name="feedback"></a>Feedback
 [Click this Link](https://docs.google.com/forms/d/e/1FAIpQLSdxOOe3qaxfK8kmPEZUaPQNM9cL_5jFxzUpHI_K2WNJvnpEuA/viewform) to leave feeback.  We want to hear from you! ⚡️
 
-##<a name="support"></a>Support  
+## <a name="support"></a>Support  
 Tested in Chrome 55 & Node 6/7.  
 GitHub Issues: <https://github.com/team-emt/razorframe/issues>
 
-##<a name="contributions"></a>Contributions
+## <a name="contributions"></a>Contributions
 ❤️ Contributions welcome!  
 Please see out GitHub repo at: <https://github.com/team-emt/razorframe>
 
-##<a name="license"></a>License  
+## <a name="license"></a>License  
 [MIT](https://github.com/team-emt/razorframe/blob/master/LICENSE)   
